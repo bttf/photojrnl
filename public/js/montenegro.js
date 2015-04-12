@@ -207,10 +207,10 @@ $(window).load(function() {
   //Loader
   var timeOut = 0;
   if($('.loader').length) {
-    $(".loader").delay(1000).fadeOut(1000, function() {
-      $(".wrapper").animate({ opacity: 1 }, 1000);
+    $(".loader").delay(250).fadeOut(250, function() {
+      $(".wrapper").animate({ opacity: 1 }, 500);
     });
-    timeOut = 2000;
+    timeOut = 500;
   } else {
     $(".wrapper").animate({ opacity: 1 }, 300);
   }
@@ -222,21 +222,21 @@ $(window).load(function() {
   $('section.contact, section.contact .content').css("opacity", 0);
   $('section.blog .post').css("opacity", 0);
 
-  setTimeout(function(){$('header.header').addClass('animated fadeInDown')},2300);
-  setTimeout(function(){$('section.home .title').addClass('animated fadeInDown')},2600);
-  setTimeout(function(){$('section.home .text').addClass('animated fadeInUp')},2600);
-  setTimeout(function(){$('section.home .buttons').addClass('animated fadeInUp')},2900);
+  setTimeout(function(){$('header.header').addClass('animated fadeInDown')},timeOut);
+  setTimeout(function(){$('section.home .title').addClass('animated fadeInDown')}, timeOut);
+  setTimeout(function(){$('section.home .text').addClass('animated fadeInUp')},timeOut );
+  setTimeout(function(){$('section.home .buttons').addClass('animated fadeInUp')}, timeOut);
 
   //setTimeout(function(){$('section.work .tools').addClass('animated fadeInDown')},2500);
-  setTimeout(function(){$('section.work .files').addClass('animated fadeInUp')},2500);
+  setTimeout(function(){$('section.work .files').addClass('animated fadeInUp')}, timeOut);
 
-  setTimeout(function(){$('section.about').addClass('animated fadeInDown')},2500);
-  setTimeout(function(){$('section.about .content').addClass('animated fadeInUp')},3000);
+  setTimeout(function(){$('section.about').addClass('animated fadeInDown')}, timeOut);
+  setTimeout(function(){$('section.about .content').addClass('animated fadeInUp')}, timeOut);
 
-  setTimeout(function(){$('section.contact').addClass('animated fadeInDown')},2500);
-  setTimeout(function(){$('section.contact .content').addClass('animated fadeInUp')},3000);
+  setTimeout(function(){$('section.contact').addClass('animated fadeInDown')}, timeOut);
+  setTimeout(function(){$('section.contact .content').addClass('animated fadeInUp')}, timeOut);
 
-  setTimeout(function(){$('section.blog .post').addClass('animated fadeInUp')},2500);
+  setTimeout(function(){$('section.blog .post').addClass('animated fadeInUp')}, timeOut);
 });
 
 $(window).resize(function() {

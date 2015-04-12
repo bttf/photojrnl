@@ -6,6 +6,8 @@ var express = require('express'),
 module.exports = function (app) {
   app.use('/', router);
   app.use('/work', router);
+  app.use('/about', router);
+  app.use('/contact', router);
 };
 
 router.get('/', function (req, res, next) {
@@ -20,4 +22,12 @@ router.get('/', function (req, res, next) {
 
 router.get('/work', function (req, res, next) {
   res.render('work');
+});
+
+router.get('/about', function (req, res, next) {
+  res.render('about');
+});
+
+router.get('/contact', function (req, res, next) {
+  res.render('contact');
 });
