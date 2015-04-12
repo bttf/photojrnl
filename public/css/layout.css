@@ -1,0 +1,246 @@
+/*
+*  Montenegro (HTML) 1.0
+*  Copyright 2015, Limitless LLC
+*  www.limitless.company
+*/
+
+/* Table of Content
+==================================================
+	#Media Queries
+*/
+
+
+/* #Media Queries
+================================================== */
+
+	@media screen and (min-resolution: 2dppx) { 
+
+		section.home .buttons .more {
+			background-image: url(../images/misc/home-bottom-arrow@2x.png);
+		}
+
+		section.about .content .more .contact:before {
+			background-image: url(../images/misc/about-contact@2x.png);
+		}
+
+		section.work .tools .albums .selected:after {
+			background-image: url(../images/misc/filter-arrow@2x.png);
+		}
+
+		.work-preview .info .navigate .prev, 
+		.work-preview .info .navigate .next {
+			background-image: url(../images/misc/work-preview-nav@2x.png);
+		}
+
+		.work-preview .meta .close button {
+			background-image: url(../images/misc/work-preview-close@2x.png);
+		}
+
+	}
+
+	@media only screen and (max-height: 767px) {
+
+		section.work .files.list .file .thumb {
+			height: 400px;
+		}
+
+	}
+
+	@media only screen and (max-width: 959px) {
+
+			section.home .flex-control-nav {
+				display: none;
+			}
+
+	}
+
+	@media only screen and (min-width: 768px) and (max-width: 959px) {
+
+			.container {
+				width: 90%;
+			}
+
+			section.about .offset, 
+			section.contact .offset {
+				padding-top: 200px;
+			}
+
+			section.work .files.grid {
+				-moz-column-count: 2;
+				-webkit-column-count: 2;
+				column-count: 2;
+			}
+
+			.work-preview .info .details .detail .name, 
+			.work-preview .info .share .link .name {
+				width: 40%;
+			}
+	}
+
+	@media only screen and (max-width: 767px) {
+
+		/* Header
+		================================================== */
+
+			header.header {
+				height: auto;
+			}
+
+			header.header.active {
+				background: #000000 !important;
+			}
+
+			header.header.active .logo {
+				display: none;
+			}
+
+			header.header.active .navigation {
+				display: table;
+			}
+
+			header.header.active .main .menu {
+				background-image: url(../images/misc/navigation-menu-close.png);
+				background-size: 14px 14px;
+			}
+
+			header.header .main { 
+				height: 60px;
+			}
+
+			header.header .main .menu {
+				display: inline-block;
+			}
+
+			header.header .navigation {
+				display: none;
+				height: 100%;
+				margin-top: -60px;
+				width: 100%;
+			}
+
+			header.header .navigation .links {
+				display: table-cell;
+				vertical-align: middle;
+				width: 100%;
+
+			}
+
+			header.header .navigation .links li {
+				color: #ffffff;
+				display: block;
+				font-size: 24px;
+				font-weight: 300;
+				letter-spacing: 0.01em;
+				line-height: 1.8;
+				margin: 0px;
+				text-align: left;
+			}
+
+
+		/* Home
+		================================================== */
+
+			section.home .main .title {
+			  font-size: 36px;
+			}
+
+			section.home .main .text span {
+			  font-size: 12px;
+			}
+
+
+		/* Work
+		================================================== */
+
+			section.work .tools .albums {
+				width: 48px;
+			}
+
+			section.work .tools .albums .items {
+				left: auto;
+			}
+
+			section.work .tools .albums .items li {
+  				font-size: 22px;
+  			}
+
+			section.work .tools .views {
+				display: none;
+			}
+
+			section.work .files.grid {
+				padding-top: 35px;
+				-moz-column-count: 1;
+				-webkit-column-count: 1;
+				column-count: 1;
+				-moz-column-gap: 0px;
+				-webkit-column-gap: 0px;
+				column-gap: 0px;
+			}
+
+			section.work .files.list .file .thumb {
+			  	height: auto;
+			}
+
+			section.work .files.grid .file .info {
+				padding: 13px 0px 25px;
+			}
+
+			.work-preview .meta .logo,
+			.work-preview .info .navigate {
+				display: none;
+			}
+
+			.work-preview .mfp-container {
+				padding: 0px;
+			}
+
+			.work-preview .meta .close {
+				text-align: center;
+			}
+
+			.work-preview .info .share {
+				border-top: 1px solid #777777;
+				margin-top: 20px;
+				padding-top: 15px;
+			}
+
+			.work-preview .info .share .link .name {
+				width: 30%;
+			}
+
+
+		/* Blog
+		================================================== */
+
+			section.blog .posts, 
+			article.post header.entry-header .entry-meta, 
+			article.post header.entry-header .entry-title,
+			section.blog article.post header.entry-header .entry-title,
+			article.post .entry-content,
+			section.article .posts {
+				padding: 0px;
+			}
+
+			.article-preview .meta .logo {
+				display: none;
+			}
+
+			.article-preview .meta .close {
+				text-align: center;
+			}
+
+
+	}
+
+	@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+
+
+	}
+
+	@media only screen and (max-width: 479px) {
+
+
+
+	}
