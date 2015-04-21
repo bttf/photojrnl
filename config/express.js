@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 var compress = require('compression');
 var methodOverride = require('method-override');
 var exphbs  = require('express-handlebars');
+var cors = require('cors');
 
 module.exports = function(app, config) {
   app.engine('handlebars', exphbs({
@@ -32,6 +33,9 @@ module.exports = function(app, config) {
   app.use(compress());
   app.use(express.static(config.root + '/public'));
   app.use(methodOverride());
+
+  app.use(cors());
+  app.options('*', cors());
 
   var controllers = glob.sync(config.root + '/app/controllers/*.js');
   controllers.forEach(function (controller) {
