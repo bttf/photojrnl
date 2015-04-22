@@ -1,7 +1,7 @@
 var express = require('express'),
   router = express.Router(),
   mongoose = require('mongoose'),
-  Article = mongoose.model('Article');
+  Photo = mongoose.model('Photo');
 
 module.exports = function (app) {
   app.use('/', router);
@@ -15,7 +15,9 @@ router.get('/', function (req, res, next) {
 });
 
 router.get('/work', function (req, res, next) {
-  res.render('work');
+  Photo.find(function(err, photos) {
+    res.render('work', { photos: photos });
+  });
 });
 
 router.get('/about', function (req, res, next) {
