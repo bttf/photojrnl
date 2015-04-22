@@ -5,7 +5,7 @@ var express = require('express'),
 var multer = require('multer');
 
 module.exports = function (app) {
-  app.use('/photos', multer({ dest: '../../public' }), router);
+  app.use('/photos', router);
 };
 
 router.get('/', function (req, res, next) {
@@ -30,12 +30,18 @@ router.get('/:id', function(req, res, next) {
   });
 });
 
-router.post('/', function(req, res, next) {
+router.post('/', multer({ dest: './public/uploads' }), function(req, res, next) {
+  var key = Object.keys(req.files)[0];
+  var p = req.files[key];
   var photo = new Photo();
-  var p = req.body.photo;
-  for (var key in p) {
-    photo[key] = p[key];
-  }
+
+  photo.title = p.originalname;
+  photo.imgPath = [req.protocol,
+                  '://',
+                  req.headers.host,
+                  '/',
+                  p.path.split('/').splice(1).join('/')].join('');
+
   photo.save(function (err) {
     if (err) {
       return res.send(err);

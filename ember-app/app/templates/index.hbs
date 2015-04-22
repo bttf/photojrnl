@@ -1,0 +1,11 @@
+{{#link-to 'photos.new'}}Add Photo{{/link-to}}
+
+<ul>
+  {{#each photo in model}}
+  <li>
+    {{photo.title}} 
+    <img src={{photo.imgPath}}>
+    <button {{action 'deletePhoto' photo}}>delete</button>
+  </li>
+  {{/each}}
+</ul>

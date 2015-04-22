@@ -1,0 +1,7 @@
+{{img-upload addNewPhoto='addNewPhoto'}}
+
+{{#if model.photos}}
+{{#each photo in model.photos}}
+<img src={{photo.imgPath}}>
+{{/each}}
+{{/if}}
