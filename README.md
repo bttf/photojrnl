@@ -6,6 +6,8 @@ The Node.js app provides server-rendered web-app for public access.
 
 Ember app is served at '/admin' to provide admin controls.
 
+Front-end design by [limitless](http://www.limitless.company/).
+
 ## Pre-reqs
 
 * [Git](http://git-scm.com/)
