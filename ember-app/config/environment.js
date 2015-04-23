@@ -4,7 +4,7 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'photojrnl',
     environment: environment,
-    baseURL: '/admin',
+    baseURL: '/admin/',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
