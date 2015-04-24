@@ -1,1 +1,8 @@
+@import 'components/_photo-edit';
+@import 'photos/_edit';
 @import '_application';
+@import '_index';
+
+body {
+  overflow-x: hidden;
+}

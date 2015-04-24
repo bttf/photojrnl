@@ -1,3 +1,13 @@
-{{model.title}}
-{{model.imgPath}}
-
+<div class="photos-edit">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-6">
+        <img class="img-responsive" src={{model.imgPath}} alt={{model.title}}>
+      </div>
+      <div class="col-sm-6">
+        <h1>Photo Info</h1>
+        {{photo-edit photo=model}}
+      </div>
+    </div>
+  </div>
+</div>
