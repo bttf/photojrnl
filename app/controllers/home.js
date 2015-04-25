@@ -1,7 +1,8 @@
 var express = require('express'),
   router = express.Router(),
   mongoose = require('mongoose'),
-  Photo = mongoose.model('Photo');
+  Photo = mongoose.model('Photo'),
+  Profile = mongoose.model('Profile');
 
 module.exports = function (app) {
   app.use('/', router);
@@ -11,7 +12,12 @@ module.exports = function (app) {
 };
 
 router.get('/', function (req, res, next) {
-  res.render('index');
+  Profile.findOne(function(err, profile) {
+    res.render('index', {
+      fullName: profile.firstName + ' ' + profile.lastName,
+      subtitle: profile.subtitle
+    });
+  });
 });
 
 router.get('/work', function (req, res, next) {
@@ -21,9 +27,25 @@ router.get('/work', function (req, res, next) {
 });
 
 router.get('/about', function (req, res, next) {
-  res.render('about');
+  Profile.findOne(function(err, profile) {
+    res.render('about', {
+      location: profile.location,
+      aboutDesc: profile.aboutDesc,
+      favQuote: profile.favoriteQuote,
+      favQuoteAuthor: profile.favQuoteAuthor
+    });
+  });
 });
 
 router.get('/contact', function (req, res, next) {
-  res.render('contact');
+  Profile.findOne(function(err, profile) {
+    res.render('contact', {
+      contactDesc: profile.contactDesc,
+      phone: profile.phone,
+      email: profile.email,
+      twitter: profile.twitter,
+      facebook: profile.facebook,
+      instagram: profile.instagram
+    });
+  });
 });

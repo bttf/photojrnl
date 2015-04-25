@@ -22,19 +22,25 @@
 
           <div class="story">
             <h3 class="title">Work together</h3>
-            <p class="text">Nunc orci ipsum, pellentesque a tristique et, mattis non arcu. Sed aliquet gravida aliquet. Donec gravida, nisl at pretium lobortis, lectus libero aliquam felis.</p>
+            <p class="text">{{contactDesc}}</p>
           </div>
 
           <div class="info">
-            <a href="tel:+0053996182" class="active" target="_blank"><h4>+00 5399 6182</h4></a><br>
-            <a href="mailto:contact@remyblack.me" target="_blank"><h4>contact@remyblack.me</h4></a>
+            <a href="tel:{{phone}}" class="active" target="_blank"><h4>{{phone}}</h4></a><br>
+            <a href="mailto:{{email}}" target="_blank"><h4>{{email}}</h4></a>
           </div>
 
           <div class="social">
 
-            <a href="http://www.twitter.com/limitlesscompan" class="circle twitter" target="_blank"></a>
-            <a href="http://www.facebook.com/limitlesscompany" class="circle facebook" target="_blank"></a>
-            <a href="http://www.instagram.com/limitlesscompany" class="circle instagram" target="_blank"></a>
+            {{#if twitter}}
+            <a href="http://www.twitter.com/{{twitter}}" class="circle twitter" target="_blank"></a>
+            {{/if}}
+            {{#if facebook}}
+            <a href="http://www.facebook.com/{{facebook}}" class="circle facebook" target="_blank"></a>
+            {{/if}}
+            {{#if instagram}}
+            <a href="http://www.instagram.com/{{instagram}}" class="circle instagram" target="_blank"></a>
+            {{/if}}
 
           </div>
 

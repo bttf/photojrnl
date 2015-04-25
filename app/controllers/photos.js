@@ -57,7 +57,7 @@ router.put('/:id', function(req, res, next) {
     if (err) {
       return res.send(err);
     }
-    var p = req.body.entry;
+    var p = req.body.photo;
     for (var key in p) {
       photo[key] = p[key];
     }

@@ -1,0 +1,100 @@
+<div class="container">
+  <div class="row">
+    <form action="">
+      <div class='col-sm-4'>
+        <div class="form-group">
+          <label for="">First Name</label>
+          {{input class="form-control" type="text" value=model.firstName}}
+        </div>
+      </div>
+
+      <div class='col-sm-4'>
+        <div class="form-group">
+          <label for="">Last Name</label>
+          {{input class="form-control" type="text" value=model.lastName}}
+        </div>
+      </div>
+
+      <div class='col-sm-4'>
+        <div class="form-group">
+          <label for="">Front-page Subtitle</label>
+          {{input class="form-control" type="text" value=model.subtitle}}
+        </div>
+      </div>
+
+      <div class='col-sm-4'>
+        <div class="form-group">
+          <label for="">Favorite Quote</label>
+          {{input class="form-control" type="text" value=model.favoriteQuote}}
+        </div>
+      </div>
+
+      <div class='col-sm-4'>
+        <div class="form-group">
+          <label for="">Favorite Quote Auther</label>
+          {{input class="form-control" type="text" value=model.favQuoteAuthor}}
+        </div>
+      </div>
+
+      <div class='col-sm-4'>
+        <div class="form-group">
+          <label for="">About Description</label>
+          {{input class="form-control" type="text" value=model.aboutDesc}}
+        </div>
+      </div>
+
+      <div class='col-sm-4'>
+        <div class="form-group">
+          <label for="">Location</label>
+          {{input class="form-control" type="text" value=model.location}}
+        </div>
+      </div>
+
+      <div class='col-sm-4'>
+        <div class="form-group">
+          <label for="">Instagram</label>
+          {{input class="form-control" type="text" value=model.instagram}}
+        </div>
+      </div>
+
+      <div class='col-sm-4'>
+        <div class="form-group">
+          <label for="">Facebook</label>
+          {{input class="form-control" type="text" value=model.facebook}}
+        </div>
+      </div>
+
+      <div class='col-sm-4'>
+        <div class="form-group">
+          <label for="">Twitter</label>
+          {{input class="form-control" type="text" value=model.twitter}}
+        </div>
+      </div>
+
+      <div class='col-sm-4'>
+        <div class="form-group">
+          <label for="">E-Mail</label>
+          {{input class="form-control" type="text" value=model.email}}
+        </div>
+      </div>
+
+      <div class='col-sm-4'>
+        <div class="form-group">
+          <label for="">Phone #</label>
+          {{input class="form-control" type="text" value=model.phone}}
+        </div>
+      </div>
+
+      <div class='col-sm-4'>
+        <div class="form-group">
+          <label for="">Contact Page Description</label>
+          {{input class="form-control" type="text" value=model.contactDesc}}
+        </div>
+      </div>
+
+      <div class='col-sm-12'>
+        <button type='submit' class='btn btn-primary' {{action 'save' model}}>Save</button>
+      </div>
+    </form>
+  </div>
+</div>
