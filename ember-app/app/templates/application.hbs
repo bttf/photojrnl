@@ -1,25 +1,27 @@
 <div class='application'>
   <div class='header'>
-    <ul class="list-inline">
-      <li>
-        {{#link-to 'index'}}
-        <h2 id="title">photojrnl {{fa-icon 'camera-retro'}}</h2>
-        {{/link-to}}
-      </li>
+    <div class='container'>
+      <ul class="list-inline">
+        <li>
+          {{#link-to 'index'}}
+          <h2 id="title">photojrnl</h2>
+          {{/link-to}}
+        </li>
 
-      <li>
-        {{#link-to 'photos.new'}}
-        <h2>{{fa-icon 'plus-square'}}</h2>
-        {{/link-to}}
-      </li>
+        <li>
+          {{#link-to 'photos.new'}}
+          <h2>{{fa-icon 'plus-square'}}</h2>
+          {{/link-to}}
+        </li>
 
-      <li>
-        {{#link-to 'profile'}}
-        <h2>{{fa-icon 'user'}}</h2>
-        {{/link-to}}
-      </li>
-    </ul>
+        <li>
+          {{#link-to 'profile'}}
+          <h2>{{fa-icon 'user'}}</h2>
+          {{/link-to}}
+        </li>
+      </ul>
+    </div>
   </div>
-</div>
 
 {{outlet}}
+</div>

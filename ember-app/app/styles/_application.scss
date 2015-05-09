@@ -1,8 +1,13 @@
 .application {
+  padding-top: 5em;
+
   .header {
     background-color: #EEE;
     border-bottom: 1px #DDD solid;
-    padding: 1em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
 
     a {
       color: #333;
@@ -10,6 +15,10 @@
 
     h2 {
       display: inline-block;
+    }
+
+    li {
+      margin-right: 2em;
     }
   }
 }
