@@ -6,8 +6,9 @@ export default Ember.Route.extend({
       return profiles.objectAt(0);
     });
   },
+
   setupController: function(controller, model) {
-    if (model.get('length') < 1) {
+    if (!model || model.get('length') < 1) {
       controller.set('model', this.store.createRecord('profile'));
     } else {
       controller.set('model', model);
