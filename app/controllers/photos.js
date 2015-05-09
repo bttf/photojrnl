@@ -3,6 +3,7 @@ var express = require('express'),
   mongoose = require('mongoose'),
   Photo = mongoose.model('Photo');
 var multer = require('multer');
+var async = require('async');
 
 module.exports = function (app) {
   app.use('/photos', router);
@@ -31,23 +32,32 @@ router.get('/:id', function(req, res, next) {
 });
 
 router.post('/', multer({ dest: './public/uploads' }), function(req, res, next) {
-  var key = Object.keys(req.files)[0];
-  var p = req.files[key];
-  var photo = new Photo();
+  var keys = Object.keys(req.files);
+  var photos = [];
+  keys.forEach(function(key) {
+    var p = req.files[key];
+    var photo = new Photo();
+    photo.title = p.originalname;
+    photo.imgPath = [req.protocol,
+                    '://',
+                    req.headers.host,
+                    '/',
+                    p.path.split('/').splice(1).join('/')].join('');
+    photos.push(function(callback) {
+      photo.save().then(function(photo) {
+        callback(null, photo);
+      }, function(err) {
+        callback(err);
+      });
+    });
+  });
 
-  photo.title = p.originalname;
-  photo.imgPath = [req.protocol,
-                  '://',
-                  req.headers.host,
-                  '/',
-                  p.path.split('/').splice(1).join('/')].join('');
-
-  photo.save(function (err) {
+  async.parallel(photos, function(err, results) {
     if (err) {
       return res.send(err);
     }
     res.json({
-      photo: photo
+      photos: results
     });
   });
 });

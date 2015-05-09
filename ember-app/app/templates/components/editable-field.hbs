@@ -1,9 +1,13 @@
 {{#if isEditing}}
+
 <div>
   {{input type='text' value=field placeholder=placeholder}} <a href="#" {{action 'toggleEdit'}}>{{fa-icon 'check'}}</a>
 </div>
+
 {{else}}
+
 <div>
   {{field}} <a href="#" {{action 'toggleEdit'}}>{{fa-icon 'pencil'}}</a>
 </div>
+
 {{/if}}

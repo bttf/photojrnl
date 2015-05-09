@@ -25,7 +25,9 @@ export default Ember.Component.extend({
         processData: false,
         type: 'POST'
       }).done(function(res) {
-        self.sendAction('addNewPhoto', res.photo._id);
+        res.photos.forEach(function(e, i) {
+          self.sendAction('addNewPhoto', e._id);
+        });
       }).fail(function(err) { console.log('fail', err); });
     });
   }.on('didInsertElement')
