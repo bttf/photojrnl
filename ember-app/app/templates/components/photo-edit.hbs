@@ -1,31 +1,40 @@
 <div class="photo-edit">
-  <ul class="list-unstyled">
-    <li>
-      Title: {{photo.title}}
-    </li>
-    <li>
-      Camera: {{photo.camera}}
-    </li>
-    <li>
-      Lens: {{photo.lens}}
-    </li>
-    <li>
-      Focal Length: {{photo.focalLength}}
-    </li>
-    <li>
-      Shutter Speed: {{photo.shutterSpeed}}
-    </li>
-    <li>
-      Apperture: {{photo.apperture}}
-    </li>
-    <li>
-      ISO: {{photo.iso}}
-    </li>
-    <li>
-      Location: {{photo.location}}
-    </li>
-    <li>
-      Album: {{photo.album}}
-    </li>
-  </ul>
+  <form>
+    <div class="form-group">
+      <label for="photoTitle">Photo Title:</label>
+      {{input id='photoTitle' class='form-control' type='text' value=photo.title placeholder='Bob\'s Birthday'}}
+    </div>
+    <div class="form-group">
+      <label for="photoCamera">Camera:</label>
+      {{input id='photoCamera' class='form-control' type='text' value=photo.camera placeholder='Canon EOS 5D Mark II'}}
+    </div>
+    <div class="form-group">
+      <label for="photoLens">Lens</label>
+      {{input id='photoLens' class='form-control' type='text' value=photo.lens placeholder='50 1.4'}}
+    </div>
+    <div class="form-group">
+      <label for="photoFocalLength">Focal Length</label>
+      {{input id='photoFocalLength' class='form-control' type='text' value=photo.focalLength placeholder='50MM'}}
+    </div>
+    <div class="form-group">
+      <label for="photoShutterSpeed">Shutter Speed</label>
+      {{input id='photoShutterSpeed' class='form-control' type='text' value=photo.shutterSpeed placeholder='1/60 S'}}
+    </div>
+    <div class="form-group">
+      <label for="photoApperture">Apperture</label>
+      {{input id='photoApperture' class='form-control' type='text' value=photo.apperture placeholder='F/2.2'}}
+    </div>
+    <div class="form-group">
+      <label for="photoISO">ISO</label>
+      {{input id='photoISO' class='form-control' type='text' value=photo.iso placeholder='200'}}
+    </div>
+    <div class="form-group">
+      <label for="photoLocation">Location</label>
+      {{input id='photoLocation' class='form-control' type='text' value=photo.location placeholder='London'}}
+    </div>
+    <div class="form-group">
+      <label for="photoAlbum">Album</label>
+      {{input id='photoAlbum' class='form-control' type='text' value=photo.album placeholder='Album'}}
+    </div>
+  </form>
 </div>

@@ -7,15 +7,13 @@ export default Ember.Component.extend({
 
   attachEvents: function() {
     var self = this;
-
     $('#img-file-input').on('change', function(e) {
       self.set('fileSet', true);
     });
 
     $('#imgUploadForm').submit(function(e) {
-      var data = new FormData();
       e.preventDefault();
-
+      var data = new FormData();
       $.each($('#img-file-input')[0].files, function(i, file) {
         data.append('file-' + i, file);
       });
@@ -28,9 +26,7 @@ export default Ember.Component.extend({
         type: 'POST'
       }).done(function(res) {
         self.sendAction('addNewPhoto', res.photo._id);
-      }).fail(function(err) {
-        console.log('submit fail', err);
-      });
+      }).fail(function(err) { console.log('fail', err); });
     });
   }.on('didInsertElement')
 });

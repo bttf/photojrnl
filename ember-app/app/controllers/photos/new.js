@@ -4,10 +4,9 @@ export default Ember.Controller.extend({
   actions: {
     save: function(photo) {
       photo.save().then(function() {
-        console.log('success mother fucker');
+        console.log('debug: success');
       }, function(err) {
-        console.log('failure ass: ', err);
-        console.dir(err);
+        console.log('debug: failure', err);
       });
     },
 

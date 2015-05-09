@@ -1,7 +1,7 @@
 <div class="container">
   <h1>Edit Profile</h1>
-  <div class="row">
-    <form action="">
+  <form action="">
+    <div class="row">
       <div class='col-sm-4'>
         <div class="form-group">
           <label for="">First Name</label>
@@ -15,45 +15,51 @@
           {{input class="form-control" type="text" value=model.lastName}}
         </div>
       </div>
+    </div>
 
+    <div class="row">
       <div class='col-sm-4'>
         <div class="form-group">
           <label for="">Front-page Subtitle</label>
-          {{input class="form-control" type="text" value=model.subtitle}}
+          {{textarea class="form-control" value=model.subtitle placeholder='Short, brief sentence to go under your name on the main landing page.'}}
         </div>
       </div>
 
       <div class='col-sm-4'>
         <div class="form-group">
-          <label for="">Favorite Quote</label>
-          {{input class="form-control" type="text" value=model.favoriteQuote}}
+          <label for="">Personal Quote</label>
+          {{textarea class="form-control" value=model.favoriteQuote placeholder='A personal quote that you\'d like to share with customers.'}}
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class='col-sm-4'>
+        <div class="form-group">
+          <label for="">About Page Description</label>
+          {{textarea class="form-control" value=model.aboutDesc placeholder='Describe yourself and your work.'}}
         </div>
       </div>
 
       <div class='col-sm-4'>
         <div class="form-group">
-          <label for="">Favorite Quote Auther</label>
-          {{input class="form-control" type="text" value=model.favQuoteAuthor}}
-        </div>
-      </div>
-
-      <div class='col-sm-4'>
-        <div class="form-group">
-          <label for="">About Description</label>
-          {{input class="form-control" type="text" value=model.aboutDesc}}
+          <label for="">Contact Page Description</label>
+          {{textarea class="form-control" value=model.contactDesc placeholder='Short description on how you\'d like to be contacted.'}}
         </div>
       </div>
 
       <div class='col-sm-4'>
         <div class="form-group">
           <label for="">Location</label>
-          {{input class="form-control" type="text" value=model.location}}
+          {{input class="form-control" type="text" value=model.location placeholder='Location of your work'}}
         </div>
       </div>
+    </div>
 
+    <div class="row">
       <div class='col-sm-4'>
         <div class="form-group">
-          <label for="">Instagram</label>
+          <label for="">Instagram Handle</label>
           {{input class="form-control" type="text" value=model.instagram}}
         </div>
       </div>
@@ -67,7 +73,7 @@
 
       <div class='col-sm-4'>
         <div class="form-group">
-          <label for="">Twitter</label>
+          <label for="">Twitter Handle</label>
           {{input class="form-control" type="text" value=model.twitter}}
         </div>
       </div>
@@ -86,16 +92,9 @@
         </div>
       </div>
 
-      <div class='col-sm-4'>
-        <div class="form-group">
-          <label for="">Contact Page Description</label>
-          {{input class="form-control" type="text" value=model.contactDesc}}
-        </div>
-      </div>
-
       <div class='col-sm-12'>
         <button type='submit' class='btn btn-primary' {{action 'save' model}}>Save</button>
       </div>
-    </form>
-  </div>
+    </div>
+  </form>
 </div>

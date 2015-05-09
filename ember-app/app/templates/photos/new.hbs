@@ -1,13 +1,18 @@
 <div class="photos_new container">
   <h1>Upload Photos</h1>
   <hr>
+
   {{img-upload addNewPhoto='addNewPhoto'}}
 
   <div class="row">
+
     {{#each photo in model.photos}}
+
     <div class="col-sm-2">
       <img class="img-responsive" src={{photo.imgPath}}>
     </div>
+
     {{/each}}
+
   </div>
 </div>
