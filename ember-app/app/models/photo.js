@@ -13,5 +13,10 @@ export default DS.Model.extend({
   apperture: attr('string'),
   iso: attr('string'),
   location: attr('string'),
-  album: belongsTo('album')
+  album: belongsTo('album'),
+  updateDate: attr('date', {
+    defaultValue: function() {
+      return new Date();
+    }
+  })
 });

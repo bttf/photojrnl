@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
-export default Ember.Controller.extend({
+export default Ember.ArrayController.extend({
+  sortProperties: ['updateDate'],
+  sortAscending: false,
   actions: {
     deletePhoto: function(photo) {
       photo.destroyRecord().then(function() {
