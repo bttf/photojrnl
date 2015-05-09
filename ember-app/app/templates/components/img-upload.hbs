@@ -1,11 +1,9 @@
-<form id="imgUploadForm">
-  <div>
+<div class="img-upload">
+  <form id="imgUploadForm">
     <input type='file' id='img-file-input' multiple>
-  </div>
 
-  <div>
     {{#if fileSet}}
-    <button type='submit'>submit</button>
+    <button class='btn btn-primary' type='submit'>Upload</button>
     {{/if}}
-  </div>
-</form>
+  </form>
+</div>

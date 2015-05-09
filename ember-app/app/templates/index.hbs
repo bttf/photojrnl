@@ -3,14 +3,20 @@
     <div class="col-xs-12">
       <h1>Latest Photos</h1>
     </div>
+
     {{#each photo in model}}
+
     <div class="col-sm-4">
-      <div class="photo">
-        <img class="img-responsive" src={{photo.imgPath}}>
+      <div class="photo" style="background: url({{photo.imgPath}}) center / cover;">
+        <!--<img class="img-responsive" src={{photo.imgPath}}>-->
+
         {{#link-to 'photos.edit' photo class='btn btn-default'}}edit{{/link-to}}
+
         <a class='btn btn-default' {{action 'deletePhoto' photo}}>delete</a>
       </div>
     </div>
+
     {{/each}}
+
   </div>
 </div>
