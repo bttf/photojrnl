@@ -43,6 +43,7 @@ router.post('/', multer({ dest: './public/uploads' }), function(req, res, next) 
                     req.headers.host,
                     '/',
                     p.path.split('/').splice(1).join('/')].join('');
+
     photos.push(function(callback) {
       photo.save().then(function(photo) {
         callback(null, photo);

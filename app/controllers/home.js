@@ -13,6 +13,8 @@ module.exports = function (app) {
 
 router.get('/', function (req, res, next) {
   Profile.findOne(function(err, profile) {
+    if (err) { return next(err); }
+    if (!profile) { return next('No profile found.'); }
     res.render('index', {
       fullName: profile.firstName + ' ' + profile.lastName,
       subtitle: profile.subtitle

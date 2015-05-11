@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import ENV from 'photojrnl/config/environment';
 
 var $ = Ember.$;
 
@@ -19,7 +20,7 @@ export default Ember.Component.extend({
       });
 
       $.ajax({
-        url: 'http://localhost:3000/photos',
+        url: 'http://' + ENV.apiHost + '/photos',
         data: data,
         contentType: false,
         processData: false,
